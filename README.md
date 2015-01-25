@@ -1,6 +1,6 @@
 # Project Euler solutions
 
-(C) 2014 Michal Skuza
+(C) 2015 Michal Skuza
 
 ## Contents
 (Shhh, of course you are not supposed to see these solutions. Don't tell anyone !)
