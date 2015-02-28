@@ -1,5 +1,5 @@
-let sieve n = 
-  let arr = (Array.create n false) in
+let process n = 
+  let arr = (Array.make n false) in
     let rec step3 p m = 
       let mul = p * m in
       match (mul >= n) with 

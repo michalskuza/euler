@@ -9,7 +9,7 @@ let n = int_of_float(sqrt (float_of_int limit));;
 http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes *)
 
 let sieve n = 
-let arr = (Array.create n false) in
+let arr = (Array.make n false) in
   let rec step3 p m = 
     let mul = p * m in
     match (mul >= n) with 

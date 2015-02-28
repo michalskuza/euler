@@ -1,1 +1,1 @@
-val sieve : int -> int list
+val process : int -> int list
