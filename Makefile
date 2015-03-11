@@ -36,6 +36,8 @@ prob20v2_ocaml:
 	ocamlfind ocamlopt -linkpkg -thread -package core nums.cmxa problem20_ver2.ml -o problem20_ver2
 prob22_java:
 	javac Problem22.java
+prob25_java:
+	javac Problem25.java
 sieve_java:
 	javac Sieve.java
 
