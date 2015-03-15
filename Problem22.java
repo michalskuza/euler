@@ -1,19 +1,19 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class Problem22 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         if (args.length != 1)
             return;
 
         String file = args[0];
 
-        List<String> lines = readFile(file);
+        List<String> lines = Files.readAllLines(Paths.get(file), StandardCharsets.UTF_8);
         List<String> names = processLines(lines);
         Collections.sort(names);
 
@@ -47,20 +47,5 @@ public class Problem22 {
             }
         }
         return allNames;
-    }
-
-    private static List<String> readFile(String file) {
-        List<String> lines = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                lines.add(line);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return lines;
     }
 }
